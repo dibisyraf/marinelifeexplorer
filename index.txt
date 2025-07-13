@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sealife Wonders</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e0f7fa;
+      color: #004d40;
+    }
+    header {
+      background-color: #00695c;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+    h2 {
+      color: #00796b;
+      border-bottom: 2px solid #00796b;
+      padding-bottom: 0.5rem;
+    }
+    footer {
+      background-color: #004d40;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    .card {
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .accordion-button:not(.collapsed) {
+      color: #fff;
+      background-color: #00796b;
+    }
+    <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scroll to Top Button</title>
+  <style>
+    body {
+      height: 2000px;
+      font-family: Arial, sans-serif;
+    }
+    #scrollToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      font-size: 24px;
+      display: none;
+      cursor: pointer;
+      z-index: 999;
+      animation: floatUpDown 2s ease-in-out infinite;
+    }
+    @keyframes floatUpDown {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+  </style>
+</head>
+<body>
+
+  <button id="scrollToTopBtn" title="Back to Top">⬆</button>
+
+  <script>
+    const scrollBtn = document.getElementById('scrollToTopBtn');
+    window.addEventListener('scroll', () => {
+      scrollBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
+    });
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌊 Sealife Wonders</h1>
+    <p>Explore marine biodiversity, threats, methods, and how to protect our ocean world</p>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#home">Sealife</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#identification">Identification</a></li>
+          <li class="nav-item"><a class="nav-link" href="#method">Methods</a></li>
+          <li class="nav-item"><a class="nav-link" href="#zones">Zones</a></li>
+          <li class="nav-item"><a class="nav-link" href="#species">Species</a></li>
+          <li class="nav-item"><a class="nav-link" href="#ecosystems">Ecosystems</a></li>
+          <li class="nav-item"><a class="nav-link" href="#foodchain">Food Chain</a></li>
+          <li class="nav-item"><a class="nav-link" href="#importance">Importance</a></li>
+          <li class="nav-item"><a class="nav-link" href="#threats">Threats</a></li>
+          <li class="nav-item"><a class="nav-link" href="#conservation">Conservation</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sdg14">SDG 14</a></li>
+          <li class="nav-item"><a class="nav-link" href="#funfacts">Fun Facts</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-4">
+    <section id="home" class="mb-5">
+      <h2>Welcome</h2>
+      <p>Oceans are the lifeblood of Earth, covering over 70% of the surface and hosting an incredible diversity of life. This site explores marine life, threats it faces, and how we can protect it.</p>
+    </section>
+
+    <section id="identification" class="mb-5">
+      <h2>Identification of Sealife</h2>
+      <ul>
+        <li><strong>Microorganisms:</strong> Phytoplankton, marine bacteria</li>
+        <li><strong>Invertebrates:</strong> Jellyfish, octopus, coral</li>
+        <li><strong>Vertebrates:</strong> Fish, turtles, whales, dolphins</li>
+        <li><strong>Seabirds:</strong> Seagull, albatross</li>
+      </ul>
+    </section>
+
+    <section id="method" class="mb-5">
+      <h2>Methods to Study Sealife</h2>
+      <ul>
+        <li>Diving Surveys</li>
+        <li>ROVs & Drones</li>
+        <li>Tagging & Tracking</li>
+        <li>Underwater Cameras</li>
+        <li>DNA Sampling</li>
+      </ul>
+    </section>
+
+    <section id="zones" class="mb-5">
+      <h2>Ocean Zones</h2>
+      <div class="accordion" id="zonesAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#zone1">Sunlight Zone</button></h2>
+          <div id="zone1" class="accordion-collapse collapse show">
+            <div class="accordion-body">Top layer with most marine life & photosynthesis.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#zone2">Twilight Zone</button></h2>
+          <div id="zone2" class="accordion-collapse collapse">
+            <div class="accordion-body">Dimly lit, strange fish and squids.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#zone3">Midnight Zone</button></h2>
+          <div id="zone3" class="accordion-collapse collapse">
+            <div class="accordion-body">Pitch dark, bioluminescent creatures.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="species" class="mb-5">
+      <h2>Marine Species</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">🐠 Clownfish</h5>
+              <p class="card-text">Lives in sea anemones and known for symbiotic relationships.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">🐋 Blue Whale</h5>
+              <p class="card-text">The largest creature on Earth, feeding mostly on krill.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">🐬 Dolphin</h5>
+              <p class="card-text">Social, intelligent marine mammals found worldwide.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="mb-5">
+      <h2>📩 Contact & Learn More</h2>
+      <p>Email: <a href="mailto:adibisyraf75@gmail.com">adibisyraf75@gmail.com</a></p>
+      <p>TikTok: <strong>@sealife_wonders</strong></p>
+      <p>Visit <a href="https://www.un.org/sustainabledevelopment/oceans/" target="_blank">UN SDG 14</a></p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Sealife Wonders | Education • Conservation • Action
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
